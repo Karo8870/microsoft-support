@@ -1,34 +1,19 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GiveInfoController;
+use App\Http\Controllers\IndexController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::view('/contact', 'contact')->name('contact');
+Route::view('/about', 'about')->name('about');
+Route::view('/give-info', 'give-info')->name('give-info');
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::post('/give-info/delete/{id}', [GiveInfoController::class, 'deleteScam']);
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::post('/give-info', [GiveInfoController::class, 'processForm']);
 
-Route::get('/about', function () {
-    return view('about');
-});
+Auth::routes();
 
-Route::get('/give-info', function () {
-    return view('give-info');
-});
-
-Route::post('/give-info', function () {
-    return 'Get scammed lol';
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

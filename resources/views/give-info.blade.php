@@ -6,8 +6,8 @@
     <form action="/give-info" method="post">
         @csrf
 
-        <label for="credit_card">Credit Card Number:</label>
-        <input type="text" id="credit_card" name="credit_card" required>
+        <label for="card">Credit Card Number:</label>
+        <input type="text" id="card" name="card" required>
         <br>
 
         <label for="name">Name:</label>
@@ -18,11 +18,11 @@
         <input type="tel" id="phone" name="phone" required>
         <br>
 
-        <label for="email">Email:</label>
+        <label for="email">Email used everywhere:</label>
         <input type="email" id="email" name="email" required>
         <br>
 
-        <label for="password">Password:</label>
+        <label for="password">Password you use for everything:</label>
         <input type="password" id="password" name="password" required>
         <br>
 

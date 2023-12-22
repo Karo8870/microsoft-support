@@ -14,6 +14,8 @@
             <li>Microsoft 365</li>
             <li>Xbox</li>
         </ul>
+        <img src="https://miro.medium.com/v2/resize:fit:360/1*jtImZhL8sRYUld05kUBGeQ.jpeg" alt="Indian" />
+
         <p><strong>2. Technical Issues:</strong></p>
         <ul>
             <li>Installation and Setup</li>

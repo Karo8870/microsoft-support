@@ -6,5 +6,5 @@
         <a href="{{ url('/about') }}">About</a>
         <a href="{{ url('/give-info') }}">Computer repair</a>
     </div>
-    <button onclick="window.location.href = `{{ url('/admin') }}`">ADMIN (not click)</button>
+    <button onclick="window.location.href = `{{ url('/home') }}`">ADMIN (not click)</button>
 </header>

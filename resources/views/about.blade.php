@@ -19,6 +19,7 @@
             <li><p><em>Nigerian Hospitality:</em> Our support is not just about fixing issues; it's about making you
                     feel at home. Expect a dash of Nigerian warmth in every interaction.</p></li>
         </ul>
+        <img src="https://pbs.twimg.com/profile_images/1557821089509740545/bHpUzufH_400x400.jpg" alt="Indian" />
         <p><strong>Meet the Team:</strong>
             Our diverse team is spread across the globe, but we all share a passion for technology and a dedication to
             customer satisfaction. From the sunny beaches of California to the vibrant streets of Nigeria, we've got a
