@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1a202c;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header div a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.review-image {
+    width: 10rem;
+    height: 20rem;
+}
+
+.review-container {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+footer {
+    background: hsla(0, 94%, 67%, 1);
+
+    background: linear-gradient(90deg, hsla(0, 94%, 67%, 1) 0%, hsla(50, 94%, 68%, 1) 29%, hsla(117, 93%, 70%, 1) 58%, hsla(229, 93%, 73%, 1) 90%);
+
+    background: -moz-linear-gradient(90deg, hsla(0, 94%, 67%, 1) 0%, hsla(50, 94%, 68%, 1) 29%, hsla(117, 93%, 70%, 1) 58%, hsla(229, 93%, 73%, 1) 90%);
+
+    background: -webkit-linear-gradient(90deg, hsla(0, 94%, 67%, 1) 0%, hsla(50, 94%, 68%, 1) 29%, hsla(117, 93%, 70%, 1) 58%, hsla(229, 93%, 73%, 1) 90%);
+}
